@@ -1,0 +1,41 @@
+example of Language
+
+1.  C
+2.  C++
+3.  C#
+4.  Java
+5.  Kotlin
+6.  Ruby
+7.  Python
+8.  Javascript
+
+Algorithm - na may code sa likod 
+* na laging may input at may output siya
+" Input, Process and an Output" 
+ - english form lang siya kung anong gagawin ninyo
+sa code ninyo na dapat may input , process and then output
+
+Microsoft Windows [Version 10.0.19043.1021]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Administrator>SFC /SCANNOW
+
+Beginning system scan.  This process will take some time.
+
+Beginning verification phase of system scan.
+Verification 100% complete.
+
+Windows Resource Protection found corrupt files and successfully repaired them.
+For online repairs, details are included in the CBS log file located at
+windir\Logs\CBS\CBS.log. For example C:\Windows\Logs\CBS\CBS.log. For offline
+repairs, details are included in the log file provided by the /OFFLOGFILE flag.
+
+C:\Users\Administrator>The restoreth option is not recognized in this context.
+'The' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Administrator>For more information, refer to the help.
+
+
+
+https://youtu.be/aer8S1fFbNc

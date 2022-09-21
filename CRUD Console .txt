@@ -1,0 +1,215 @@
+		INSERT BUTTON 
+
+           SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=USER_TABLE!;Integrated Security=True;Pooling=False");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Table(ID,Name,Age) VALUES (@ID,@Name,@Age)", con);
+            
+            cmd.Parameters.AddWithValue("@ID", int.Parse(textBox1.Text));
+            cmd.Parameters.AddWithValue("@Name", textBox2.Text);
+            cmd.Parameters.AddWithValue("@Age", textBox3.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+
+            MessageBox.Show("Successfully Inserted!!");
+
+--------------------------------------------------------------------------------------------------------------------
+
+                                UPDATE BUTTON
+
+ SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=USER_TABLE!;Integrated Security=True;Pooling=False");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE Table SET Name=@Name, Age=@Age WHERE ID=@ID", con);
+
+            cmd.Parameters.AddWithValue("@ID", int.Parse(textBox1.Text));
+            cmd.Parameters.AddWithValue("@Name", textBox2.Te0xt);
+            cmd.Parameters.AddWithValue("@Age", textBox3.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+
+            MessageBox.Show("Successfully Updated!!");
+
+-------------------------------------------------------------------------------------------------------------------------
+                                      DELETE BUTTON
+
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=USER_TABLE!;Integrated Security=True;Pooling=False");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("DELETE Table WHERE ID=@ID", con);
+
+            cmd.Parameters.AddWithValue("@ID", int.Parse(textBox1.Text));
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+
+            MessageBox.Show("Successfully Deleted!!");
+
+---------------------------------------------------------------------------------------------------------
+
+                     SEARCH  BUTTON
+
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=USER_TABLE!;Integrated Security=True;Pooling=False");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("DELETE Table WHERE ID=@ID", con);
+
+            cmd.Parameters.AddWithValue("@ID", int.Parse(textBox1.Text));
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+
+            MessageBox.Show("Successfully Deleted!!");
+
+------------------------------------------------------------------------------------------------
+
+                      FORM_LOAD
+
+
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=USER_TABLE!;Integrated Security=True;Pooling=False");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Table ", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        
+
+https://codezips.com/csharp/car-rental-system-in-c-with-source-code/?fbclid=IwAR2AufzZwT37o6ptoQbMe0i8kte7HEySJPjlN0MUh1eG1T64bY3IWtNQ-L4
+
+https://github.com/git/git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using MySql.Data.MySqlClient;
+
+MySqlConnection connection = new
+MySqlConnection("datasource=localhost;port=3306;username=root;assword=");
+	MySqlCommand command;
+	MySqlDataReader mdr;
+
+//LOGIN
+connection.Open();
+	string selectQuery = "SELECT * FROM loginform.loginform.userinfo WHERE
+	Username = ' " + txtUsername.Text + " ' AND Password = ' " +
+	txtPassword.Text + " ' ; ";
+	command = new MySqlCommand(selectQuery), connection);
+	mdr = command.ExecuteReader();
+	if (mdr.Read())
+	{
+	
+	string MyConnection2 = 
+	"datasource=localhost;port=3306;username=root;password=";
+	string Query = "update loginform.userinfo set LastLogin=' " +
+	dateTimePicker1.Value = " ' where Username=' " +
+	this.txtUsername.Text = " ' ; ";
+	MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+
+			MySqlCommand MyCommand2 = new MySqlCommand (Query,
+			MyConn2);
+			MySqlDataReader MyReader2;
+			MyConn2.Open();
+			MyReader2 = MyCommand2.ExecuteReader();
+			while (MyReader2.Read())
+			{
+			}
+			MyConn2.Close();
+	
+		MessageBox.Show("Login Succesfull!");
+		this.Hide();
+		LoginSuccessForm frm2 = new LoginSuccesForm();
+		frm2.ShowDialog();
+	}	
+	else
+	{
+
+		messageBox.Show("Incorrect Login Information! Try again.");
+	}
+
+	connection.Close();
+
+	if (string.IsNullOrEmpty(txtUsername.Text) ||
+	string.IsNullOrEmpty(txtPassword.Text))
+		{
+		messageBox.Show("Please input Username and Password";
+		"Error");
+	}
+
+
+// CREATE
+
+
+	connection.Open();
+	string selectQuery = "SELECT * FROM loginfo WHERE
+	Username = ' " + txtUsername.Text + " ' ; ";
+	command = new MySqlCommand(selectQuery, connection);
+	mdr = command.ExecuteReader();
+	if (mdr.Read())
+	{
+		MessageBox.Show("Username not available!");
+	}
+	else
+	{
+
+		string connectonString = 
+		"datasource=127.0.0.1;port=3306;username=root;password=;datab
+		ase=loginform;";
+		string iquery = "INSERT INTO userinfo ('                        ID , 'Username',
+		'Password', 'DateCreated', 'LastLogin') VALUES ( NULL, ' " +
+		txtUsername.Text + " ' , ' " +  dateTimePicker1.Value +
+		" ' )";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
