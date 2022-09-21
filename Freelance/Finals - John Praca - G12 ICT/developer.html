@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer</title> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c15857b4a.js"crossorigin="anonymous"></script>
+
+</head>
+<body> 
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(100, 99, 99);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+.header-btn {
+    width: 160px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBBB37;
+    box-shadow: 5px 10px 30px rgba(255, 0, 221, 0.445);
+    border-radius: 30px;
+    color: black;
+    margin-top: 30px;
+    transition: 0,6s ease-in-out;
+    cursor: pointer;
+}
+.header-btn:hover{
+    background-color: #FBBB37;
+}
+/*--------ABOUT-----------*/
+#about {
+    position: relative;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #323445;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0px 0px 5%;
+    overflow: hidden;
+}
+.about-img {
+    position: relative;
+    margin: 80px 30px;
+    right: 1%;
+    top: 10%;
+}
+.about-img img{
+    height: 400px;
+}
+
+.about-text {
+    width: 100%;
+    font-size: .9rem;
+
+    margin: -400px 450px;
+} 
+.about-text h2 {
+    line-height: .4;
+}
+.about-text span {
+    color: #fff; 
+    font-weight: bold;
+
+    font-size: 1rem;  
+}
+.about-text .-h1 {
+    position: relative;
+
+    font-size: 4rem;
+    bottom: 170px;
+    left: 22px;
+}
+.about-text .d-h1 {
+
+    position: relative;
+    font-size: 9rem;
+    left: -140px;
+    bottom: 42.9vh;
+    color: rgba(228, 228, 228, 0.075);
+
+}
+.about-text .p1 {
+    position: relative;
+
+    right: 60px;
+    bottom: 30.5rem;
+    width: 600px;
+    color: #727272;
+    line-height: 1.7;
+    font-size: 1.2rem;
+}
+.data { 
+    position: relative;
+    
+    left: 10%;
+    bottom: 70vh;
+    font-size: 1.1rem;
+}
+.txts {
+    position: relative;
+
+    bottom: 26px;
+    font-size: 1rem;
+    color: #727272;
+}
+.one {
+    position: relative;
+    left: 16%;
+}
+.two {
+    position: relative;
+    left: 18%;
+}
+.three {
+    position: relative;
+    left: 16%;
+}
+.four {
+    position: relative;
+    left: 16%;
+}
+.five {
+    position: relative;
+    left: 16%;
+}
+.wrapper {
+    margin: -85px 200px;
+}
+.wrapper a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #585858
+}
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(77, 77, 77,0.7);
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+.modal .modalcontent {
+    position: relative;
+    background: #fff;
+    width: 500px;
+    max-width: 90%;
+    padding: 1em 2em;
+    border-radius: 4px;
+}
+.modal .modalclose {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #585858;
+    text-decoration: none;
+    font-size: 36px;
+}
+/* Progress Bar  */
+
+.container {
+    position: absolute;
+
+    margin: -537px 80%;
+}
+.button {
+    position: relative;
+    height: 55px;
+    min-width: 200px;
+    width: 100px;
+    background: #FBBB37;
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+.button.progress::before {
+    animation: progress 6s ease-in-out forwards;
+}
+@keyframes progress {
+    
+    0%  {
+        left: -100%;
+    }
+    
+    10%  {
+        left: -97%;
+    }
+    
+    20%  {
+        left: -92%;
+    }
+    30%  {
+        left: -82%;
+    }
+    40%  {
+        left: -62%;
+    }
+    
+    50%  {
+        left: -18%;
+    }
+    60%  {
+        left: -14%;
+    }
+    80%  {
+        left: -3%;
+    }
+    190%  {
+        left: 0%;
+    }
+}
+.button .text-icon {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button .text-icon span {
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-style: 26px;
+    font-weight: 400;
+    margin-left: 6px;
+}
+
+    </style>
+
+    <section id="about">
+                <div class="about-img">
+                    <img src="img/john.jpg" class="john-img"alt="about-img"/>
+                </div>
+
+            <div class="about-text">
+                <div class="about--h1">
+                    <h1 class="d-h1">Developer</h1>
+                </div>
+                <p class="p1">Me I Learn the basic HTML then CSS only because 
+                very hard to learn of Javascript then the PHP and the other Languages.
+                </p>
+                    <div class="data">    
+                            <h2><span>Name:</span>          <h2 class="one txts">John Praca</h2></span></h2>
+                            <h2><span>Date of Bith: </span>  <h2 class="two txts">May 25, 2004</h2></span></h2> 
+                            <h2><span>Address:</span>       <h2 class="three txts">Pansol, Calamba City Purok 1 </h2></span></h2>
+                            <h2><span>Email:</span>         <h2 class="four txts">johnpraca16gmail.com</h2></span></h2>
+                            <h2><span>Phone:</span>         <h2 class="five txts">0963-006-0501</h2></span></h2>
+                        <button class="header-btn">DOWNLOAD CV</button>
+                <div class="wrapper">
+                    <button class="header-btn"><a href="#modalbox">Message Box</a></button>
+                </div>
+            </div>
+
+                <div id="modalbox" class="modal">
+                    <div class="modalcontent">
+                        <h1>John Developer</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi explicabo porro autem quidem.</p>
+                        <a href="#" class="modalclose">
+                            &#10006;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="button container">
+            <div class="text-icon">
+                <span class="text">Upload File</span>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        const button = document.querySelector(".button"),
+        text = document.querySelector(".text");
+
+        button.addEventListener("click", ()=>{
+            button.classList.add("progress");
+            text.innerText = "Uploading...";
+
+            setTimeout(()=>{
+            button.classList.remove("progress"); //remove progress after 6s
+            text.innerText = "Uploaded...";
+            },6000); //1000ms = 1s (6000 = 6s))
+        });
+    </script>
+     
+   
+</body>
+</html>
